@@ -14,7 +14,7 @@ public class Main {
 
         sistema.cadastrarEquipe(equipe);
 
-        Projeto projeto = new Projeto("Projeto A", "Sistema Java", "01/04", "10/04", gerente);
+        Projeto projeto = new Projeto("Projeto A3", "Sistema Java", "01/04", "10/04", gerente);
         projeto.adicionarEquipe(equipe);
 
         Tarefa tarefa = new Tarefa("Criar sistema", "Desenvolver código", dev);
