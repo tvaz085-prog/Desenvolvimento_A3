@@ -1,12 +1,12 @@
-# Sistema de Gestão de Projetos
+## Exemplo de execução
 
-Projeto desenvolvido em Java com POO.
+Projeto: Projeto A  
+Gerente: Thiago  
+Status: Planejado  
 
-## Funcionalidades
-- Cadastro de usuários
-- Projetos
-- Equipes
-- Tarefas
+Equipe:
+Equipe 1  
+João - colaborador  
 
-## Execução
-Rodar o arquivo Main.java
+Tarefa:
+Criar sistema - Pendente
