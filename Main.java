@@ -4,7 +4,7 @@ public class Main {
         Sistema sistema = new Sistema();
 
         Usuario gerente = new Usuario("Thiago", "123", "email@email.com", "Gerente", "admin", "123", "gerente");
-        Usuario dev = new Usuario("João", "456", "joao@email.com", "Dev", "user", "123", "colaborador");
+        Usuario dev = new Usuario("Thiago Vaz", "456", "thiagovaz@email.com", "Dev", "user", "123", "colaborador");
 
         sistema.cadastrarUsuario(gerente);
         sistema.cadastrarUsuario(dev);
