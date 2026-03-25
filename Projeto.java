@@ -11,17 +11,19 @@ public class Projeto {
     ArrayList<Equipe> equipes = new ArrayList<>();
     ArrayList<Tarefa> tarefas = new ArrayList<>();
 
-    public Projeto(String nome, String descricao, String dataInicio, String dataFim, Usuario gerente) {
+    public Projeto(String nome, String descricao, String dataInicio, String dataFim, String status, Usuario gerente) {
         this.nome = nome;
         this.descricao = descricao;
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
+        this.status = status;
         this.gerente = gerente;
-        this.status = "Planejado";
     }
 
     public void adicionarEquipe(Equipe e) {
-        equipes.add(e);
+        if (!equipes.contains(e)) {
+            equipes.add(e);
+        }
     }
 
     public void adicionarTarefa(Tarefa t) {
@@ -30,17 +32,25 @@ public class Projeto {
 
     public void exibir() {
         System.out.println("\nProjeto: " + nome);
-        System.out.println("Gerente: " + gerente.nome);
+        System.out.println("Descrição: " + descricao);
+        System.out.println("Início: " + dataInicio);
+        System.out.println("Fim: " + dataFim);
         System.out.println("Status: " + status);
+        System.out.println("Gerente: " + gerente.nome);
 
-        System.out.println("Equipes:");
-        for (Equipe e : equipes) {
-            e.exibir();
+        if (!equipes.isEmpty()) {
+            for (Equipe e : equipes) {
+                e.exibir();
+            }
         }
 
         System.out.println("Tarefas:");
-        for (Tarefa t : tarefas) {
-            t.exibir();
+        if (tarefas.isEmpty()) {
+            System.out.println("Nenhuma tarefa cadastrada");
+        } else {
+            for (Tarefa t : tarefas) {
+                t.exibir();
+            }
         }
     }
 }
