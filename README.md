@@ -81,7 +81,7 @@ Tarefa: Criar sistema - Pendente - Responsável: João
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 **Thiago Vaz**  
  *Programação de Soluções Computacionais*
