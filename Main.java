@@ -3,11 +3,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        // Inicialização do sistema e entrada de dados
         Scanner sc = new Scanner(System.in);
         Sistema sistema = new Sistema();
 
         Usuario usuarioLogado = null;
 
+        // Menu inicial: login ou cadastro de novo usuário
         while (usuarioLogado == null) {
             System.out.println("\n1 - Login");
             System.out.println("2 - Novo usuário");
@@ -32,6 +34,7 @@ public class Main {
 
             } else if (op == 2) {
 
+                // Cadastro de novo usuário com definição de perfil
                 System.out.print("Nome: ");
                 String nome = sc.nextLine();
                 System.out.print("CPF: ");
@@ -74,6 +77,7 @@ public class Main {
 
         int opcao;
 
+        // Menu principal do sistema
         do {
             System.out.println("\n=== MENU ===");
             System.out.println("1 - Cadastrar Usuário / Colaborador");
@@ -91,6 +95,7 @@ public class Main {
             switch (opcao) {
 
                 case 1:
+                    // Cadastro de usuário dentro do sistema
                     System.out.print("Nome: ");
                     String nome = sc.nextLine();
                     System.out.print("CPF: ");
@@ -125,6 +130,7 @@ public class Main {
                     break;
 
                 case 2:
+                    // Cadastro de equipe com múltiplos usuários (sem repetição)
                     System.out.print("Nome da equipe: ");
                     String nomeEquipe = sc.nextLine();
                     System.out.print("Descrição: ");
@@ -170,6 +176,7 @@ public class Main {
                     break;
 
                 case 3:
+                    // Cadastro de projeto e vinculação de equipe
                     System.out.print("Nome do projeto: ");
                     String nomeProj = sc.nextLine();
                     System.out.print("Descrição: ");
@@ -199,6 +206,7 @@ public class Main {
                     break;
 
                 case 4:
+                    // Cadastro de tarefa vinculada a um projeto
                     if (sistema.projetos.isEmpty()) break;
 
                     System.out.print("Nome da tarefa: ");
